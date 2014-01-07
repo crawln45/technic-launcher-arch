@@ -1,7 +1,8 @@
-# Maintainer: Archimaredes <microphonics17@gmail.com>
+# Maintainer: Crawln45 <crawl45@gmail.com>
+# Forked from : Archimaredes <microphonics17@gmail.com>
 
-pkgname=technic-launcher
-pkgver='curl -s http://build.technicpack.net/job/TechnicLauncher/lastSuccessfulBuild/buildNumber | grep -Eo "[0-9]{0,5}"'
+pkgname=technic-launcher-git
+pkgver=382
 pkgrel=1
 pkgdesc="The Technic Platform's launcher, which allows you to install and play dozens of Technic modpacks for Minecraft, including Tekkit, Voltz, and Hexxit."
 arch=(any)
@@ -13,11 +14,7 @@ conflicts=(tekkit minecraft-technic-launcher)
 noextract=(TechnicLauncher.jar)
 install=technic-launcher.install
 
-source=(LICENSE
-	technic-launcher
-	technic-launcher.desktop
-	technic-launcher.png
-	http://mirror.technicpack.net/launcher/$pkgver/TechnicLauncher.jar)
+source=("$pkgname"::"git://github.com/crawln45/technic-launcher-git.git")
 
 md5sums=("SKIP")
 
