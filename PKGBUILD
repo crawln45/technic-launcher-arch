@@ -22,6 +22,7 @@ pkgver () {
 }
 package() {
 	cd "$srcdir/$pkgname"
+	rm README.md
     install -D -m 644 "${srcdir}/${pkgname}/LICENSE"		    "${pkgdir}/usr/share/licenses/technic-launcher/LICENSE"
     install -D -m 755 "${srcdir}/${pkgname}/technic-launcher"	    "${pkgdir}/usr/bin/technic-launcher"
     install -D -m 644 "${srcdir}/${pkgname}/technic-launcher.desktop"  "${pkgdir}/usr/share/applications/technic-launcher.desktop"
